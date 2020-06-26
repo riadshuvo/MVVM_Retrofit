@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import com.example.mvvm_retrofit.R.layout.activity_splash
-import com.example.mvvm_retrofit.room.WeatherRoom
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -15,8 +14,6 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_splash)
-
-        WeatherRoom.get(application)
 
         //this is splash screen and this splash screen will remain only 2 seconds
         Looper.myLooper()?.let {
