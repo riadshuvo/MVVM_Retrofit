@@ -1,12 +1,12 @@
-package com.example.mvvm_retrofit.view
+package com.example.mvvm_weather_retrofit.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvm_retrofit.R
-import com.example.mvvm_retrofit.viewModel.DetailsActivityViewModel
+import com.example.mvvm_weather_retrofit.R
+import com.example.mvvm_weather_retrofit.viewModel.DetailsActivityViewModel
 import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {

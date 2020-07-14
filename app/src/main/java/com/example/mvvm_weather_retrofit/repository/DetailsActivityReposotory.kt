@@ -1,11 +1,12 @@
-package com.example.mvvm_retrofit.repository
+package com.example.mvvm_weather_retrofit.repository
 
 import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import com.example.mvvm_retrofit.network.BASE_URL
-import com.example.mvvm_retrofit.network.WeatherNetwork
-import com.example.mvvm_retrofit.network.model.WeatherResponse
+import com.example.mvvm_weather_retrofit.network.BASE_URL
+import com.example.mvvm_weather_retrofit.network.RetrofitRepo
+import com.example.mvvm_weather_retrofit.network.WeatherNetwork
+import com.example.mvvm_weather_retrofit.network.model.WeatherResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,13 +28,12 @@ class DetailsActivityReposotory(val application: Application) {
 
         showProgressBar.value = true
 
-        val retrofit =
-            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
-                .build()
+        //network call
+        val weatherRetrofitService = RetrofitRepo.buildService(WeatherNetwork::class.java)
 
-        val service = retrofit.create(WeatherNetwork::class.java)
+        val getWeatherWeid = weatherRetrofitService.getWeather(woeid)
 
-        service.getWeather(woeid).enqueue(object : Callback<WeatherResponse>{
+        getWeatherWeid.enqueue(object : Callback<WeatherResponse>{
             override fun onFailure(call: Call<WeatherResponse>, t: Throwable) {
                showProgressBar.value = false
                 Toast.makeText(application,"error message: ${t.message}", Toast.LENGTH_SHORT).show()

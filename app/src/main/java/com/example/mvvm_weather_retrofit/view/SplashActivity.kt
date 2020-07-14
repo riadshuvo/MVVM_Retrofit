@@ -1,13 +1,11 @@
-package com.example.mvvm_retrofit.view
+package com.example.mvvm_weather_retrofit.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
-import com.example.mvvm_retrofit.R.layout.activity_splash
-import kotlinx.android.synthetic.main.activity_splash.*
+import com.example.mvvm_weather_retrofit.R.layout.activity_splash
 
 class SplashActivity : AppCompatActivity() {
 
@@ -22,7 +20,6 @@ class SplashActivity : AppCompatActivity() {
                 finish()
             },2000)
         }
-
 
     }
 }

@@ -1,4 +1,4 @@
-package com.example.mvvm_retrofit.view
+package com.example.mvvm_weather_retrofit.view
 
 import android.os.Bundle
 import android.view.View.GONE
@@ -6,11 +6,10 @@ import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvm_retrofit.R
-import com.example.mvvm_retrofit.adapter.LocationAdapter
-import com.example.mvvm_retrofit.viewModel.SearchActivityViewModel
+import com.example.mvvm_weather_retrofit.R
+import com.example.mvvm_weather_retrofit.adapter.LocationAdapter
+import com.example.mvvm_weather_retrofit.viewModel.SearchActivityViewModel
 import kotlinx.android.synthetic.main.activity_search.*
-
 
 
 class SearchActivity : AppCompatActivity() {

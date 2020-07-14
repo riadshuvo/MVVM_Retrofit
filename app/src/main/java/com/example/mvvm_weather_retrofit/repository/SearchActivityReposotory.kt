@@ -1,13 +1,13 @@
-package com.example.mvvm_retrofit.repository
+package com.example.mvvm_weather_retrofit.repository
 
 import android.app.Application
-import android.os.AsyncTask
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import com.example.mvvm_retrofit.network.BASE_URL
-import com.example.mvvm_retrofit.network.WeatherNetwork
-import com.example.mvvm_retrofit.network.model.Location
+import com.example.mvvm_weather_retrofit.network.BASE_URL
+import com.example.mvvm_weather_retrofit.network.RetrofitRepo
+import com.example.mvvm_weather_retrofit.network.WeatherNetwork
+import com.example.mvvm_weather_retrofit.network.model.Location
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
@@ -28,13 +28,11 @@ class SearchActivityReposotory(val application: Application) {
         showProgress.value = true
 
         //network call
-        val retrofit =
-            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
-                .build()
+        val weatherRetrofitService = RetrofitRepo.buildService(WeatherNetwork::class.java)
 
-        val services = retrofit.create(WeatherNetwork::class.java)
+        val getLocation = weatherRetrofitService.getLocaton(licationSearch)
 
-        services.getLocaton(licationSearch).enqueue(object : Callback<List<Location>>{
+            getLocation.enqueue(object : Callback<List<Location>>{
             override fun onFailure(call: Call<List<Location>>, t: Throwable) {
                 //wipe progressbar after searching complete
                 showProgress.value = false

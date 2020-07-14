@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.mvvm_retrofit"
+        applicationId "com.example.mvvm_weather_retrofit"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -52,7 +52,6 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
-    def room_version = "2.2.2"
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    // Logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 }

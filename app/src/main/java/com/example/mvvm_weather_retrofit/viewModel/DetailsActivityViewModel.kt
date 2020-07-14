@@ -1,10 +1,10 @@
-package com.example.mvvm_retrofit.viewModel
+package com.example.mvvm_weather_retrofit.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.mvvm_retrofit.network.model.WeatherResponse
-import com.example.mvvm_retrofit.repository.DetailsActivityReposotory
+import com.example.mvvm_weather_retrofit.network.model.WeatherResponse
+import com.example.mvvm_weather_retrofit.repository.DetailsActivityReposotory
 
 class DetailsActivityViewModel(application: Application) : AndroidViewModel(application) {
     private val reposotory = DetailsActivityReposotory(application)

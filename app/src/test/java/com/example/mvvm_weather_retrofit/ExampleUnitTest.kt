@@ -1,4 +1,4 @@
-package com.example.mvvm_retrofit
+package com.example.mvvm_weather_retrofit
 
 import org.junit.Test
 

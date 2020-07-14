@@ -1,10 +1,10 @@
-package com.example.mvvm_retrofit.viewModel
+package com.example.mvvm_weather_retrofit.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.mvvm_retrofit.network.model.Location
-import com.example.mvvm_retrofit.repository.SearchActivityReposotory
+import com.example.mvvm_weather_retrofit.network.model.Location
+import com.example.mvvm_weather_retrofit.repository.SearchActivityReposotory
 
 class SearchActivityViewModel(application: Application) : AndroidViewModel(application){
     private val repository = SearchActivityReposotory(application)

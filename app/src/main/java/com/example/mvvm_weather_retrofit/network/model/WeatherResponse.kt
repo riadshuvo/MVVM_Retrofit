@@ -1,4 +1,4 @@
-package com.example.mvvm_retrofit.network.model
+package com.example.mvvm_weather_retrofit.network.model
 
  data class WeatherResponse(
     val consolidated_weather: List<ConsolidatedWeather>,

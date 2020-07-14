@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mvvm_retrofit">
+    package="com.example.mvvm_weather_retrofit">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.DetailsActivity"></activity>
-        <activity android:name=".view.SearchActivity" />
-        <activity android:name=".view.SplashActivity">
+        <activity android:name="com.example.mvvm_weather_retrofit.view.DetailsActivity"></activity>
+        <activity android:name="com.example.mvvm_weather_retrofit.view.SearchActivity" />
+        <activity android:name="com.example.mvvm_weather_retrofit.view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
